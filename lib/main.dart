@@ -1,4 +1,7 @@
+import 'package:ecommerce/utils/routes/route_name.dart';
+import 'package:ecommerce/utils/routes/routes.dart';
 import 'package:ecommerce/view/auth/login_view.dart';
+import 'package:ecommerce/view/auth/register_view.dart';
 import 'package:ecommerce/view/splash_view/splash_view.dart';
 import 'package:flutter/material.dart';
 
@@ -13,12 +16,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      // home: SplashView(),
-      home: LoginView(),
+      initialRoute: RoutesName.splash,
+      onGenerateRoute: Routes.generateRoute,
+      // home: LoginView(),
+      // home: RegisterView(),
     );
   }
 }

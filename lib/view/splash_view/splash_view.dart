@@ -1,10 +1,26 @@
 import 'package:ecommerce/res/colors.dart';
 import 'package:ecommerce/res/components/text_widget.dart';
+import 'package:ecommerce/view_model/splash_services/splash_services.dart';
 import 'package:flutter/material.dart';
 
 
-class SplashView extends StatelessWidget {
+class SplashView extends StatefulWidget {
   const SplashView({Key? key}) : super(key: key);
+
+  @override
+  State<SplashView> createState() => _SplashViewState();
+}
+
+class _SplashViewState extends State<SplashView> {
+
+  SplashService service = SplashService();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    service.changeScreen(context);
+  }
 
   @override
   Widget build(BuildContext context) {
