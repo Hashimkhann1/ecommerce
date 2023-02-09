@@ -1,9 +1,7 @@
-import 'package:ecommerce/utils/routes/route_name.dart';
-import 'package:ecommerce/utils/routes/routes.dart';
-import 'package:ecommerce/view/auth/login_view.dart';
-import 'package:ecommerce/view/auth/register_view.dart';
-import 'package:ecommerce/view/splash_view/splash_view.dart';
+import 'package:ecommerce/view/bottom_navigator/bottom_navigator_view.dart';
+import 'package:ecommerce/view_model/change_screen_navigator/change_screen_navigator.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,12 +12,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      initialRoute: RoutesName.splash,
-      onGenerateRoute: Routes.generateRoute,
-      // home: LoginView(),
-      // home: RegisterView(),
+    return MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (_) => ChangeScreenNavigator()),
+        ],
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        // initialRoute: RoutesName.splash,
+        // onGenerateRoute: Routes.generateRoute,
+        // home: LoginView(),
+        home: BottomNavigatorView(),
+      ),
     );
   }
 }

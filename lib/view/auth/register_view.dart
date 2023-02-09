@@ -30,7 +30,7 @@ class RegisterView extends StatelessWidget {
                 child: Container(
                   width: screenWidth,
                   height: screenHeigt * 0.47,
-                  decoration: BoxDecoration(color: AppColor.ligtRed),
+                  decoration: const BoxDecoration(color: AppColor.ligtRed),
                 ),
               ),
               Positioned(
@@ -40,7 +40,7 @@ class RegisterView extends StatelessWidget {
                   height: 90,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
+                      image: const DecorationImage(
                           image: AssetImage('images/shoppingbag.png'),
                           fit: BoxFit.fill)),
                 ),
@@ -48,7 +48,7 @@ class RegisterView extends StatelessWidget {
               Positioned(
                 top: screenHeigt * 0.3,
                 child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
                     width: screenWidth * 0.93,
                     height: screenHeigt * 0.61,
                     decoration: BoxDecoration(
@@ -57,7 +57,7 @@ class RegisterView extends StatelessWidget {
                         boxShadow: [
                           BoxShadow(
                               color: AppColor.gray.withOpacity(0.6),
-                              offset: Offset(1.0, 1.0),
+                              offset: const Offset(1.0, 1.0),
                               blurRadius: 10,
                               spreadRadius: 10)
                         ]),
@@ -73,14 +73,14 @@ class RegisterView extends StatelessWidget {
                           height: 20.0,
                         ),
                         TextFormFieldWidget(
-                          prefixicon: Icon(Icons.account_circle),
+                          prefixicon: const Icon(Icons.account_circle),
                           hintText: 'Name',
                         ),
                         const SizedBox(
                           height: 10.0,
                         ),
                         TextFormFieldWidget(
-                          prefixicon: Icon(Icons.email),
+                          prefixicon: const Icon(Icons.email),
                           hintText: 'Email',
                           keyboardType: TextInputType.emailAddress,
                         ),
@@ -88,7 +88,7 @@ class RegisterView extends StatelessWidget {
                           height: 10.0,
                         ),
                         TextFormFieldWidget(
-                          prefixicon: Icon(Icons.lock_open_outlined),
+                          prefixicon: const Icon(Icons.lock_open_outlined),
                           hintText: 'Password',
                           obscureText: true,
                         ),
@@ -96,7 +96,7 @@ class RegisterView extends StatelessWidget {
                           height: 10.0,
                         ),
                         TextFormFieldWidget(
-                          prefixicon: Icon(Icons.lock_open_outlined),
+                          prefixicon: const Icon(Icons.lock_open_outlined),
                           hintText: 'Confirm Password',
                           obscureText: true,
                         ),

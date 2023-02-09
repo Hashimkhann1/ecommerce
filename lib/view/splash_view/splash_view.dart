@@ -36,14 +36,14 @@ class _SplashViewState extends State<SplashView> {
               height: 100,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
-                image: DecorationImage(
+                image: const DecorationImage(
                   image: AssetImage('images/shoppingbag.png'),
                   fit: BoxFit.fill
                 ),
                 boxShadow: [
                   BoxShadow(
                     color: AppColor.white.withOpacity(0.3),
-                    offset: Offset(1.0,1.0),
+                    offset: const Offset(1.0,1.0),
                     blurRadius: 10,
                     spreadRadius: 1
                   )
